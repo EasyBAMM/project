@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(39, 50, 56);
+    color: white;
+}
+
+nav {
+    background-color: rgb(39, 50, 56);
+}
+
+.jumbotron {
+    background-color: rgb(39, 50, 56);
+    border-bottom: 1px solid white;
+    padding-bottom: 37px;
+    padding-top: 45px;
+}
+
+.general {
+    display: inline;
+    border-radius: 4px;
+    background-color: rgb(63, 61, 73);
+    padding: 15px;
+
+}
+
+.toggle {
+    border-radius: 20px;
+}
+
+.video-panel {
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+}
+
+.robot-control-buttons {
+    position: absolute;
+    left: 15px;
+    bottom: 30px;
+}
+
+.robot-control-buttons div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    padding: 5px;
+}
+
+.robot-control-buttons button {
+    border-radius: 12px;
+    background-color: white
+}
+
+.camera-control-buttons {
+    position: absolute;
+    right: 15px;
+    bottom: 70px;
+}
+
+.camera-control-buttons div {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+    padding: 5px;
+}
+
+.camera-control-buttons button {
+    border-radius: 12px;
+    background-color:rgb(0, 183, 255);
+}
+
+.card {
+    background-color: rgb(63, 61, 73);
+    ;
+}
+
+
+footer {
+    border-top: 1px solid white;
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 8px;
+    }
+
+    .camera-control-buttons {
+        position: absolute;
+        right: 15px;
+        bottom: 55px;
+    }
+}
