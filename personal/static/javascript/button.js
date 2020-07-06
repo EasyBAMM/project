@@ -1,5 +1,7 @@
 window.onload = function() {
-    var forward, left, stop, right, backward, cameraLeft, cameraRight;
+    var general, forward, left, stop, right, backward, cameraLeft, cameraRight;
+    
+    general = document.getElementById("toggle-button");
     forward = document.getElementById("forward");
     left = document.getElementById("left");
     stop = document.getElementById("stop");
@@ -7,6 +9,31 @@ window.onload = function() {
     backward = document.getElementById("backward");
     cameraLeft = document.getElementById("camera-left");
     cameraRight = document.getElementById("camera-right");
+
+    var toggle = false;
+    var sectionVideo = document.getElementById("video-section");
+    var sectionCard = document.getElementById("card-section");
+    sectionVideo.style.visibility = "hidden";
+    sectionCard.style.visibility = "hidden";
+
+    general.addEventListener("click", function(e) {
+        toggle = !toggle;
+
+        if(toggle == true){
+            this.className = "btn btn-success btn-sm";
+            this.innerHTML = "On";
+            sectionVideo.style.visibility = "visible";
+            sectionCard.style.visibility = "visible";
+            controlHandle(e);        
+        }
+        else{
+            this.className = "btn btn-danger btn-sm";
+            this.innerHTML = "Off";
+            sectionVideo.style.visibility = "hidden";
+            sectionCard.style.visibility = "hidden";
+            controlHandle(e);
+        }
+    });
 
     forward.addEventListener("mousedown", function(e) {
         changeButtonColor(e, "rgb(25,206,96)");
@@ -83,6 +110,17 @@ window.onload = function() {
         e.currentTarget.style.backgroundColor = color;
     }
 
+    function controlHandle(e) {
+        state = e.currentTarget.innerHTML;
+        console.log(state);
+        fetch("control?state=" + state)
+        .then(response => response.text())
+        .then(data => {
+            //console.log(data);
+        });
+    }//controlHandle
+
+
     function carMove(e) {
         state = e.currentTarget.id;
         console.log(state);
@@ -122,4 +160,4 @@ window.onload = function() {
             //console.log(data);
         });
     }//cameraStop
-}
+};

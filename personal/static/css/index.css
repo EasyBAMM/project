@@ -22,6 +22,12 @@ nav {
 
 }
 
+.switch {
+    position: relative;
+    display: inline-block;
+    
+}
+
 .toggle {
     border-radius: 20px;
 }
