@@ -1,0 +1,112 @@
+/* 전체 100% */
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 내용 담을 공간 전체의 100% */
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* header공간 container에서 15% */
+header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row0 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    width: 100%;
+    height: 80%;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* content container에서 70% */
+section.content {
+    width: 100%;
+    height: 70%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row1 {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.menu {
+    background-color: white;
+    outline: 0;
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    margin: 4%;
+    padding: 1%;
+    border-radius: 1em;
+}
+
+button.menu:hover {
+    background-color: rgb(211, 216, 238);
+}
+
+i {
+    font-size: 4em;
+    border: 1px solid black;
+    border-radius: 70%;
+}
+
+i.icon-plus {
+    color: #CCD5EC;
+}
+
+
+/* footer 전체의 15% */
+footer {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row2 {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p.user {
+    font-size: 2em;
+    width: 100%;
+    height: 90%;
+    margin: 1%;
+    outline: 0;
+}

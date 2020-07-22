@@ -1,0 +1,113 @@
+/* 전체 100% */
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 내용 담을 공간 전체의 100% */
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* header공간 container에서 15% */
+header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row0 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    width: 100%;
+    height: 80%;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+/* content container에서 70% */
+section.content {
+    width: 100%;
+    height: 70%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row1 {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.menu {
+    background-color: white;
+    outline: 0;
+    font-size: 1em;
+    width: 100%;
+    height: 75%;
+    margin: 4%;
+    padding: 1%;
+    border-radius: 50%;
+}
+
+button.menu:hover {
+    background-color: rgb(211, 216, 238);
+}
+
+
+/* footer 전체의 15% */
+footer {
+    background-color: #C0CEF6;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row2 {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.monitor {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4em;
+    font-size: 1em;
+    width: 100%;
+    height: 90%;
+    margin: 1%;
+    outline: 0;
+}
+
+button.monitor:hover {
+    background-color: rgb(190, 132, 192);
+}
