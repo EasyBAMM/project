@@ -2,6 +2,7 @@
 html, body {
     width: 100%;
     height: 100%;
+    margin: 0;
     background-color:#ffffff;
     display: flex;
     justify-content: center;
@@ -31,9 +32,19 @@ div.row0 {
     align-items: center;
 }
 
-p {
+i.icon-left {
     width: 100%;
-    height: 80%;
+    height: 50%;
+    font-size: 3em;
+}
+
+i.icon-left:hover {
+    color: rgb(0, 255, 34);
+}
+
+p.title {
+    width: 100%;
+    height: 50%;
     font-size: 2em;
     text-align: center;
 }
@@ -85,6 +96,13 @@ i.icon-plus {
     color: #CCD5EC;
 }
 
+i.icon-left {
+    width: 100%;
+    height: 50%;
+    font-size: 3em;
+    border: 0;
+}
+
 
 /* footer 전체의 15% */
 footer {
@@ -96,7 +114,7 @@ footer {
 }
 
 div.row2 {
-    width: 95%;
+    width: 90%;
     height: 90%;
     display: flex;
     justify-content: center;
@@ -105,6 +123,7 @@ div.row2 {
 
 p.user {
     font-size: 2em;
+    text-align: center;
     width: 100%;
     height: 90%;
     margin: 1%;

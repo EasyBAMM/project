@@ -47,4 +47,18 @@ window.onload = function() {
         bridge.onservicecallback = hello_callback;
         bridge.call(helloApi, helloParams);
     };
+
+    var back;
+    back = document.getElementById("back_key");
+    back.addEventListener("click", function(e) {
+        location.replace("index.html");
+    });
+
+    // 뒤로 가기 키 설정.
+    document.addEventListener("keydown", function (e) {
+        console.log(e.key);
+        if (e.key == "Backspace") {
+            location.replace("index.html");
+        }
+    }, false);
 }

@@ -2,6 +2,7 @@
 html, body {
     width: 100%;
     height: 100%;
+    margin: 0;
     background-color:#ffffff;
     display: flex;
     justify-content: center;
@@ -31,6 +32,21 @@ div.row0 {
     align-items: center;
 }
 
+i.icon-left {
+    width: 100%;
+    height: 50%;
+    font-size: 3em;
+}
+
+i.icon-left:hover {
+    color: rgb(0, 255, 34);
+}
+
+
+p.title {
+    width: 100%;
+    height: 50%;
+}
 
 /* content container에서 80% */
 section.content {
@@ -63,11 +79,13 @@ img {
     border-radius: 1em;
 }
 
-p {
+div.explain {
     width: 100%;
-    height: 100%;
+    height: 15%;
     text-align: center;
+    font-size: 2em;
 }
+
 
 /* footer 전체의 5% */
 footer {
