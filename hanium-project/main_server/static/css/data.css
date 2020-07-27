@@ -1,0 +1,93 @@
+html, body {
+    background-image: url("/static/img/port-675539.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+}
+
+/* 전체 100% */
+div.container-all {
+    width: 100%;
+    height: 100%;
+}
+
+/* 전체의 10% */
+header {
+    width: 100%;
+    height: 10%;
+}
+
+/* 전체의 85% */
+section.container-main {
+    width: 100%;
+    height: 85%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row-left {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row-left img {
+    width: 100%;
+    height: 50%;
+    border: solid 1px gray;
+    background-color: black;
+}
+
+textarea {
+    width: 100%;
+    height: 50%;
+    padding: 3%;
+    border: solid 1px gray;
+    resize: none;
+}
+
+div.row-right {
+    width: 45%;
+    height: 100%;
+    padding: 1%;
+    display: flex;
+    background-color: wheat;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+.btn:focus {
+    outline: none;
+}
+
+aside {
+
+}
+
+/* 전체의 10% */
+footer {
+    width: 100%;
+    height: 5%;
+}

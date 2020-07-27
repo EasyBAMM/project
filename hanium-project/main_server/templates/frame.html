@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame</title>
+    <link rel="stylesheet" href="/static/fontello/css/fontello-embedded.css">
+    <link rel="stylesheet" href="/static/bootstrap-3.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/frame.css">
+</head>
+<body>
+    <div class="container-all">
+        <main>
+            <!-- row-left -->    
+            <div class="row-left">
+                <div class="row-water">
+                    <h1><i class="icon-cog"></i>수중모터</h1>
+                    <div class="btn-group btn-group-justified">
+                      <div class="btn-group">
+                        <button type="button" id="water-in"class="btn btn-default">흡입</button>
+                      </div>
+                      <div class="btn-group">
+                        <button type="button" id="water-out" class="btn btn-default">배출</button>
+                      </div>
+                      <div class="btn-group">
+                        <button type="button" id="water-stop" class="btn btn-default">정지</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-trafficlight1">
+                    <h1><i class="icon-cog"></i>신호등 A</h1>
+                    <div class="btn-group btn-group-justified">  
+                      <div class="btn-group">
+                        <button type="button" id="trafficlight1-red"class="btn btn-danger">정지</button>
+                      </div> 
+                      <div class="btn-group">
+                        <button type="button" id="trafficlight1-orange"class="btn btn-warning disabled">대기</button>
+                      </div> 
+                      <div class="btn-group">
+                        <button type="button" id="trafficlight1-green" class="btn btn-success">진행</button>
+                      </div>       
+                    </div>
+                  </div>
+                  <div class="row-trafficlight2">
+                    <h1><i class="icon-cog"></i>신호등 B</h1>
+                    <div class="btn-group btn-group-justified">  
+                      <div class="btn-group">
+                        <button type="button" id="trafficlight2-red"class="btn btn-danger">정지</button>
+                      </div> 
+                      <div class="btn-group">
+                        <button type="button" id="trafficlight2-orange"class="btn btn-warning disabled">대기</button>
+                      </div> 
+                      <div class="btn-group">
+                        <button type="button" id="trafficlight2-green" class="btn btn-success">진행</button>
+                      </div>       
+                    </div>
+                  </div>
+                  <div class="row-waterfire">
+                    <h1><i class="icon-cog"></i>워터 호스</h1>
+                    <div class="btn-group btn-group-justified">  
+                      <div class="btn-group">
+                        <button type="button" id="waterfire-in"class="btn btn-default">흡입</button>
+                      </div> 
+                      <div class="btn-group">
+                        <button type="button" id="waterfire-out"class="btn btn-default">배출</button>
+                      </div> 
+                      <div class="btn-group">
+                        <button type="button" id="watrefire-stop" class="btn btn-default">대기</button>
+                      </div>       
+                    </div> 
+                </div>   
+                  <div class="row-car1">
+                    <h1><i class="icon-cog"></i>car1</h1>
+                    <div class="btn-group btn-group-justified">
+                      <div class="btn-group">
+                        <button type="button" id="car1-start"class="btn btn-danger">정지</button>
+                      </div>
+                      <div class="btn-group">
+                        <button type="button" id="car1-out" class="btn btn-default disabled">대기</button>
+                      </div>
+                      <div class="btn-group">
+                        <button type="button" id="car1-stop" class="btn btn-success">출발</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- row-left end -->  
+                </div>
+            <!-- row-right -->    
+            <div class="row-right">
+                <div class="row-car2">
+                    <h1><i class="icon-cog"></i>car2</h1>
+                    <div class="btn-group btn-group-justified">
+                      <div class="btn-group">
+                        <button type="button" id="car2-start"class="btn btn-danger">정지</button>
+                      </div>
+                      <div class="btn-group">
+                        <button type="button" id="car2-out" class="btn btn-default disabled">대기</button>
+                      </div>
+                      <div class="btn-group">
+                        <button type="button" id="car2-stop" class="btn btn-success">출발</button>
+                      </div>
+                    </div>
+                   </div>
+                <div class="row-robotarm">
+                    <h1><i class="icon-cog"></i>로봇팔</h1>
+                    <form>
+                        <div class="form-group">
+                          <label for="formControlRange">servo 1 (between 0 and 10):</label>
+                          <input type="range" class="form-control-range" id="servo-1" min="0" max="10">
+                          <label for="formControlRange">servo 2 (between 0 and 10):</label>
+                          <input type="range" class="form-control-range" id="servo-2" min="0" max="10">
+                          <label for="formControlRange">servo 3 (between 0 and 10):</label>
+                          <input type="range" class="form-control-range" id="servo-3" min="0" max="10">
+                          <label for="formControlRange">servo 4 (between 0 and 10):</label>
+                          <input type="range" class="form-control-range" id="servo-4" min="0" max="10">
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/static/bootstrap-3.3.2-dist/js/bootstrap.js"></script>
+    
+</body>
+</html>

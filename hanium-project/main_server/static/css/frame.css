@@ -1,0 +1,121 @@
+html, body {
+    background-color: wheat;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+}
+
+/* 전체 100% */
+div.container-all {
+    width: 100%;
+    height: 100%;
+}
+
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.row-water {
+    width: 100%;
+    height: 20%;
+    padding: 1%;
+    border: 1px solid beige;
+    
+}
+
+div.row-trafficlight1 {
+    width: 100%;
+    height: 20%;
+    padding: 1%;
+    border: 1px solid beige;
+}
+
+div.row-trafficlight2 {
+    width: 100%;
+    height: 20%;
+    padding: 1%;
+    border: 1px solid beige;
+
+}
+
+div.row-waterfire {
+    width: 100%;
+    height: 20%;
+    padding: 1%;
+    border: 1px solid beige;
+}
+
+div.row-car1 {
+    width: 100%;
+    height: 20%;
+    padding: 1%;
+    border: 1px solid beige;
+}
+
+div.row-car2 {
+    width: 100%;
+    height: 20%;
+    padding: 1%;
+    border: 1px solid beige;
+
+}
+
+div.row-robotarm {
+    width: 100%;
+    height: 80%;
+    padding: 1%;
+    border: 1px solid beige;
+}
+
+
+aside {
+
+}
+
+.btn:focus {
+    outline: none;
+}
+
+@media(max-width:700px) {
+    main {
+        flex-direction: column;
+        width: 100%;
+        height: 200%;
+    }
+    
+    div.row-left {
+        width: 100%;
+        height: 100%;
+    }
+
+    div.row-right {
+        width: 100%;
+        height: 100%;
+    }
+}
