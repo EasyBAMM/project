@@ -1,6 +1,4 @@
 window.onload = function() {
-    var textboard = document.getElementById("explain");
-    // textboard.value = "hello world";
 
     var fromFrame = document.getElementById("iframe").contentWindow.document;
     // var some = fromFrame.getElementById("ss");
