@@ -115,28 +115,28 @@ window.onload = function() {
     car1_stop.addEventListener('click', function(event){
         alert('Hello world, '+ event.target.id);
         // console.log(url_car1.innerHTML + "/car1_stop");
-        let url = url_car1.innerHTML + "/car1-stop";
+        let url = url_car1.innerHTML + "/car1_stop";
         fetchData(url);
     });
 
     car1_forward.addEventListener('click', function(event){
         alert('Hello world, '+ event.target.id);
         // console.log(url_car1.innerHTML + "/car1_forward");
-        let url = url_car1.innerHTML + "/car1-forward";
+        let url = url_car1.innerHTML + "/car1_forward";
         fetchData(url);
     });
 
     car2_stop.addEventListener('click', function(event){
         alert('Hello world, '+ event.target.id);
         // console.log(url_car2.innerHTML + "/car2_stop");
-        let url = url_car2.innerHTML + "/car2-stop";
+        let url = url_car2.innerHTML + "/car2_stop";
         fetchData(url);
     });
 
     car2_forward.addEventListener('click', function(event){
         alert('Hello world, '+ event.target.id);
         // console.log(url_car1.innerHTML + "/car1_forward");
-        let url = url_car2.innerHTML + "/car2-forward";
+        let url = url_car2.innerHTML + "/car2_forward";
         fetchData(url);
     });
 
@@ -175,10 +175,10 @@ window.onload = function() {
 
     function fetchData(url) {
         console.log("fetch: " + url);
-        // fetch(url)
-        // .then(response => response.text())
-        // .then(data => {
-        //     //console.log(data);
-        // });
+        fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+        });
     }
 };

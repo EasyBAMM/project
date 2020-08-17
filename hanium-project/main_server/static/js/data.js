@@ -177,10 +177,10 @@ window.onload = function() {
 
     function fetchData(url) {
         console.log("fetch: " + url);
-        // fetch(url)
-        // .then(response => response.text())
-        // .then(data => {
-        //     //console.log(data);
-        // });
+        fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            //console.log(data);
+        });
     }
 };

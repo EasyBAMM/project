@@ -5,12 +5,12 @@ app = Flask(__name__)
 # sample
 url_server = {
                 "water" : "http://192.168.35.66:5000",
-                "trafficlight1" : "http://192.168.35.39/5000",
+                "trafficlight1" : "http://192.168.37.141",
                 "trafficlight2" : "http://192.168.35.39/5000",
                 "waterhose" : "http://192.168.35.267/5000",
-                "car1" : "http://192.168.35.8:5000",
+                "car1" : "http://192.168.37.110:5000",
                 "car2" : "http://192.168.35.26:5000",
-                "car1_camera" : "http://192.168.35.8:5000/video_feed",
+                "car1_camera" : "http://192.168.37.110:5000/video_feed",
                 "car2_camera" : "http://192.168.35.26:5000/video_feed",
                 "robotarm" : "http://192.168.35.34/5000",                
             }
