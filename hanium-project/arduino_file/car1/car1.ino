@@ -9,7 +9,7 @@
 #define L_Sensor 10  // 왼쪽 트랙킹(추적)센서 모듈 DO 핀, 아두이노 우노 보드의 10번 핀에 연결
 int motorA_vector = 1;  // 모터의 회전방향이 반대일 시 0을 1로, 1을 0으로 바꿔주면 모터의 회전방향이 바뀜.
 int motorB_vector = 1;  // 모터의 회전방향이 반대일 시 0을 1로, 1을 0으로 바꿔주면 모터의 회전방향이 바뀜.
-int motor_speed = 80;  // 모터 스피드 80 ~ 255
+int motor_speed = 90;  // 모터 스피드 80 ~ 255
 String status;
 
 
@@ -29,38 +29,39 @@ void setup()  // 초기화
 }
 
 void loop() {
-   //put your main code here, to run repeatedly:
-  if(Serial.available() > 0)  // Serial에 데이터가 들어오면
-  {
-    //From RPi to Arduino
-    status = Serial.readStringUntil('\n');// 데이터를 문자열로 읽어들여 상태변경
-    Serial.println("status: " + status);
-  }
 
-  //status == forward
+//  if(Serial.available() > 0)  // Serial에 데이터가 들어오면
+//  {
+//    //From RPi to Arduino
+//    status = Serial.readStringUntil('\n');// 데이터를 문자열로 읽어들여 상태변경
+//    Serial.println("status: " + status);
+//  }
+
+  //status = "forward";
   if(status == "forward")
   {
     Serial.println("status: forward");
-         if (digitalRead(L_Sensor) == HIGH)
+       if (digitalRead(L_Sensor) == HIGH && digitalRead(C_Sensor) == LOW && digitalRead(R_Sensor) == LOW )
        {
          //Serial.println("left sensor");
-         motorA_con( motor_speed );// 모터A 정방향
+         motorA_con( -motor_speed );// 모터A 정방향
          //Serial.println("rightspeed: " + motor_speed);
          motorB_con( -motor_speed );// 모터B 역방향
          //Serial.println("leftspeed: " + motor_speed);
        }
-       else if (digitalRead(R_Sensor) == HIGH)
+       else if (digitalRead(R_Sensor) == HIGH && digitalRead(C_Sensor) == LOW && digitalRead(L_Sensor) == LOW )
        {
          //Serial.println("right sensor");
         
-         motorA_con( -motor_speed );  // 모터A 역방향
+         motorA_con( motor_speed );  // 모터A 역방향
          motorB_con( motor_speed );  // 모터B 정방향
        }
-       else if (digitalRead(C_Sensor) == HIGH) // 만약 가운데 센서가 감지되면
+       else if (digitalRead(C_Sensor) == HIGH && digitalRead(L_Sensor) == LOW && digitalRead(R_Sensor) == LOW) // 만약 가운데 센서가 감지되면
        {
          //Serial.println("center sensor");
   
-         motorA_con( motor_speed );// 모터A 정방향
+  
+         motorA_con( -motor_speed );// 모터A 정방향
          motorB_con( motor_speed );// 모터B 정방향
        }
        else if(digitalRead(L_Sensor)!=HIGH && digitalRead(R_Sensor)!=HIGH && digitalRead(C_Sensor) != HIGH)
@@ -70,19 +71,31 @@ void loop() {
          motorA_con( 0 );// 모터A stop
          motorB_con( 0 );// 모터B stop
       }
+      else if(digitalRead(L_Sensor) == HIGH && digitalRead(C_Sensor) == HIGH && digitalRead(R_Sensor) != HIGH)
+      {
+         Serial.println("dddddddddddddddddddd");
+         //Serial.println("left sensor");
+         motorA_con( -motor_speed );// 모터A 정방향
+         //Serial.println("rightspeed: " + motor_speed);
+         motorB_con( -motor_speed );// 모터B 역방향
+         //Serial.println("leftspeed: " + motor_speed);
+       }
 
   }
   else if(status == "stop")
   {
       Serial.println("status: stop");
-      // motorA_con( 0 );// 모터A stop
-      // motorB_con( 0 );// 모터B stop
+      motorA_con( 0 );// 모터A stop
+      motorB_con( 0 );// 모터B stop
   }
   else
   {
-    Serial.println("status: nothing");
+     Serial.println("status: nothing");
+     motorA_con( 0 );// 모터A stop
+     motorB_con( 0 );// 모터B stop
   }
 
+  //delay(1000);
 }
 
 void motorA_con(int speed)
